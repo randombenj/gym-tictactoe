@@ -4,7 +4,7 @@ OpenAI Gym Style Tic-Tac-Toe Environment.
 
 	  |O|X
 	 -----
-	  |O| 
+	  |O|
 	 -----
 	 O|X|X
 
@@ -28,6 +28,7 @@ Python >= 3.5
     python human_agent.py
     python base_agent.py
     python td_agent.py
+	python mcts_agent.py
 
 
 # Temporal Difference Agent Commands
@@ -67,6 +68,10 @@ Python >= 3.5
 	  -q, --quality [high|mid|low]  Grid search quality.  [default: mid]
 	  -r, --reproduce-test INTEGER  Reproducibility test count.  [default: 3]
 	  --help                        Show this message and exit.
+
+## Monte Carlo Tree search
+
+    Usage: mcts_agent.py
 
 ## Play
 
