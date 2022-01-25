@@ -149,11 +149,19 @@ class MCTSAgent:
         return max(root_node.children, key=lambda n: n.visits).action
 
 
+class RandomAgent:
+    def __init__(self, mark: str):
+        self.mark = mark
+
+    def act(self, _, legal_actions: T.List[int], *args):
+        return random.choice(legal_actions)
+
+
 def play(max_episode=10):
     start_mark = "O"
     env = TicTacToeEnv()
 
-    agents = [MCTSAgent("O"), MCTSAgent("X")]
+    agents = [RandomAgent("O"), MCTSAgent("X")]
 
     for _ in range(max_episode):
         env.set_start_mark(start_mark)
